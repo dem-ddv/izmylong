@@ -28,9 +28,6 @@
     .skip-link { position:fixed; top:10px; left:10px; z-index:100; padding:10px 14px; color:#fff; background:var(--deep); border-radius:8px; transform:translateY(-150%); transition:transform .15s ease; }
     .skip-link:focus { transform:translateY(0); }
     .hero { position:relative; overflow:hidden; padding:30px 28px 56px; background:linear-gradient(145deg,#f8f3e8,#eef2e7); border-bottom:1px solid var(--line); }
-    .hero::before,.hero::after { content:""; position:absolute; pointer-events:none; border:1px solid rgba(36,120,74,.24); border-radius:48% 52% 57% 43%; transform:rotate(-8deg); }
-    .hero::before { width:520px; height:220px; right:-180px; top:-96px; }
-    .hero::after { width:690px; height:280px; right:-330px; bottom:-205px; }
     .hero-inner { position:relative; z-index:1; width:min(100%,var(--content)); margin:auto; }
     .brand { display:flex; align-items:center; gap:10px; color:var(--green); font-size:27px; font-weight:850; letter-spacing:-1.4px; }
     .brand::before { content:""; width:10px; height:34px; background:var(--green); border-radius:2px; box-shadow:15px 9px 0 -1px var(--green); margin-right:8px; }
@@ -240,7 +237,7 @@
       </article>
     </main>
   </div>
-  <footer><div class="footer-inner"><strong>Izmylong</strong><span>Матрица ценностей · рабочая версия 0.9</span></div></footer>
+  <footer><div class="footer-inner"><strong>Izmylong</strong><span>Матрица ценностей · рабочая версия 0.10</span></div></footer>
   <script>
     (()=>{
       const sections=[...document.querySelectorAll('main article[id]')];
