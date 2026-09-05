@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f6f2e8">
+  <meta name="description" content="Коротко о том, каким мы хотим видеть беговое сообщество Измайлонг.">
+  <link rel="canonical" href="https://ddvpage.ru/izmylong/values/brief/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://ddvpage.ru/izmylong/values/brief/">
+  <meta property="og:title" content="Как у нас принято">
+  <meta property="og:description" content="Семь коротких рассказов о ценностях Измайлонга">
+  <meta property="og:image" content="https://ddvpage.ru/izmylong/values/og-values.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Как у нас принято · Измайлонг</title>
+  <style>
+    :root {
+      --green:#24784a;
+      --green-dark:#153e2d;
+      --ink:#19372c;
+      --muted:#62736a;
+      --paper:#fbfaf5;
+      --sand:#f6f2e8;
+      --mint:#e7f1e7;
+      --lime:#d9e68b;
+      --line:#dbe1d8;
+      --white:#fff;
+      --content:1120px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:22px; background:var(--sand); }
+    body {
+      margin:0;
+      color:var(--ink);
+      background:var(--paper);
+      font:16px/1.62 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+    a { color:inherit; }
+    .skip-link {
+      position:fixed; top:10px; left:10px; z-index:20;
+      padding:10px 14px; color:var(--white); background:var(--green-dark);
+      border-radius:8px; transform:translateY(-150%);
+    }
+    .skip-link:focus { transform:translateY(0); }
+    .hero {
+      padding:28px 28px 62px;
+      background:linear-gradient(145deg,#f8f3e8 0%,#edf3e8 100%);
+      border-bottom:1px solid var(--line);
+    }
+    .hero-inner { width:min(100%,var(--content)); margin:auto; }
+    .brand {
+      display:flex; align-items:center; gap:10px;
+      color:var(--green); font-size:27px; font-weight:850; letter-spacing:-1.4px;
+    }
+    .brand::before {
+      content:""; width:10px; height:34px; margin-right:8px;
+      background:var(--green); border-radius:2px;
+      box-shadow:15px 9px 0 -1px var(--green);
+    }
+    .hero-copy { max-width:820px; margin-top:64px; }
+    .eyebrow {
+      margin:0 0 16px; color:var(--green);
+      font-size:11px; font-weight:850; letter-spacing:.13em; text-transform:uppercase;
+    }
+    h1 {
+      margin:0; max-width:780px;
+      font-size:clamp(48px,7vw,82px); font-weight:650;
+      line-height:1; letter-spacing:-.055em;
+    }
+    .lead {
+      max-width:690px; margin:25px 0 0;
+      color:#4d665b; font-size:clamp(18px,2vw,22px); line-height:1.5;
+    }
+    .nav-wrap {
+      width:min(calc(100% - 56px),var(--content)); margin:-25px auto 0;
+      position:relative; z-index:2;
+    }
+    .nav {
+      display:flex; gap:7px; padding:10px;
+      overflow-x:auto; scrollbar-width:none;
+      background:rgba(255,255,255,.94); border:1px solid var(--line);
+      border-radius:15px; box-shadow:0 13px 32px rgba(25,55,44,.08);
+    }
+    .nav::-webkit-scrollbar { display:none; }
+    .nav a {
+      flex:0 0 auto; padding:9px 13px;
+      color:#50665c; border-radius:9px;
+      font-size:13px; font-weight:720; line-height:1.2; text-decoration:none;
+    }
+    .nav a:hover,.nav a:focus-visible {
+      color:var(--green-dark); background:var(--mint); outline:none;
+    }
+    main {
+      width:min(calc(100% - 56px),var(--content));
+      margin:auto; padding:76px 0 88px;
+    }
+    .intro {
+      display:grid; grid-template-columns:minmax(240px,.72fr) 1.28fr;
+      gap:60px; align-items:start; margin-bottom:50px;
+    }
+    .intro h2 {
+      margin:0; font-size:clamp(31px,4vw,49px);
+      font-weight:640; line-height:1.08; letter-spacing:-.045em;
+    }
+    .intro p { margin:3px 0 0; color:var(--muted); font-size:17px; }
+    .cards { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .card {
+      min-width:0; padding:30px 30px 32px;
+      background:var(--white); border:1px solid var(--line); border-radius:17px;
+      box-shadow:0 8px 28px rgba(25,55,44,.045);
+      scroll-margin-top:24px;
+    }
+    .card-head { display:flex; align-items:center; gap:13px; margin-bottom:17px; }
+    .number {
+      display:grid; place-items:center; flex:0 0 auto;
+      width:34px; height:34px; color:var(--green-dark); background:var(--mint);
+      border-radius:50%; font-size:10px; font-weight:850; letter-spacing:.04em;
+    }
+    .card h2 {
+      margin:0; font-size:clamp(25px,2.7vw,34px);
+      font-weight:650; line-height:1.1; letter-spacing:-.035em;
+    }
+    .card p { margin:0; color:#40594f; font-size:16px; line-height:1.68; }
+    .card strong { color:var(--ink); font-weight:700; }
+    .team {
+      grid-column:1/-1; display:grid; grid-template-columns:minmax(245px,.72fr) 1.28fr;
+      gap:52px; padding:37px 38px 39px;
+      color:var(--white); background:var(--green-dark); border:0;
+      box-shadow:none;
+    }
+    .team .card-head { align-items:flex-start; margin:0; }
+    .team .number { color:var(--green-dark); background:var(--lime); }
+    .team h2 { color:var(--white); }
+    .team p { color:rgba(255,255,255,.84); }
+    .scope {
+      display:inline-block; margin-top:9px; padding:5px 9px;
+      color:var(--lime); background:rgba(255,255,255,.08); border-radius:999px;
+      font-size:9px; font-weight:850; letter-spacing:.1em; text-transform:uppercase;
+    }
+    footer { padding:25px 28px; color:#dce6df; background:#173d2c; }
+    .footer-inner {
+      display:flex; justify-content:space-between;
+      width:min(100%,var(--content)); margin:auto; font-size:12px;
+    }
+    @media(max-width:820px) {
+      .hero-copy { margin-top:48px; }
+      .intro { grid-template-columns:1fr; gap:17px; }
+      .cards { grid-template-columns:1fr; }
+      .team { grid-column:auto; grid-template-columns:1fr; gap:21px; }
+    }
+    @media(max-width:560px) {
+      .hero { padding:22px 19px 51px; }
+      .brand { font-size:24px; }
+      .hero-copy { margin-top:42px; }
+      h1 { font-size:clamp(44px,14vw,61px); }
+      .lead { margin-top:20px; font-size:17px; }
+      .nav-wrap { width:calc(100% - 28px); margin-top:-23px; }
+      .nav { border-radius:13px; }
+      .nav a { padding:9px 11px; }
+      main { width:calc(100% - 32px); padding:58px 0 64px; }
+      .intro { margin-bottom:33px; }
+      .intro p { font-size:16px; }
+      .card { padding:24px 21px 26px; border-radius:14px; }
+      .card-head { margin-bottom:14px; }
+      .card h2 { font-size:28px; }
+      .card p { font-size:15px; line-height:1.65; }
+      .team { padding:27px 22px 29px; }
+      .footer-inner { display:grid; gap:3px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print {
+      @page { size:A4; margin:14mm; }
+      html,body { background:#fff; }
+      .hero { padding:10px 0 30px; background:#fff; }
+      .nav-wrap,footer { display:none; }
+      main { width:100%; padding:30px 0; }
+      .card { break-inside:avoid; box-shadow:none; }
+      .team { background:var(--green-dark)!important; print-color-adjust:exact; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти к содержанию</a>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand" aria-label="Измайлонг">Izmylong</div>
+      <div class="hero-copy">
+        <p class="eyebrow">Ценности Измайлонга — коротко</p>
+        <h1>Как у нас принято</h1>
+        <p class="lead">Семь коротких рассказов о том, каким мы хотим видеть наше сообщество и как это проявляется в обычной жизни.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-wrap">
+    <nav class="nav" aria-label="Навигация по ценностям">
+      <a href="#calm">Остров спокойствия</a>
+      <a href="#care">Забота</a>
+      <a href="#independence">Независимость</a>
+      <a href="#money">Не про деньги</a>
+      <a href="#runners">Бегуны для бегунов</a>
+      <a href="#simple">Хорошо и просто</a>
+      <a href="#team">Мы — команда</a>
+    </nav>
+  </div>
+
+  <main id="content">
+    <section class="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title">Что такое Измайлонг</h2>
+      <p>Беговое сообщество, в котором люди вместе бегают, общаются и делают разные штуки для себя и друг друга. Формального членства у нас нет: если ты бегаешь с нами и чувствуешь себя частью сообщества — значит, так и есть.</p>
+    </section>
+
+    <div class="cards">
+      <article class="card" id="calm">
+        <header class="card-head"><span class="number">01</span><h2>Остров спокойствия</h2></header>
+        <p>У Измайлонга есть привычный ритм: пробежки проходят круглый год, в одно и то же время, независимо от погоды, новостей и общего уровня тревоги. Отменяем их только тогда, когда есть реальная угроза безопасности. В канал и основной чат не приносим политику, холивары и внешний информационный шум — для свободных разговоров есть отдельная болталка. Новые форматы запускаем не ради моды и хайпа, а если они действительно нужны и смогут прожить долго.</p>
+      </article>
+
+      <article class="card" id="care">
+        <header class="card-head"><span class="number">02</span><h2>Забота</h2></header>
+        <p>Стараемся по-доброму относиться к людям и не проходить мимо, когда можем помочь. Подсказываем новичкам, ждём отставшего, остаёмся с травмированным, ведём группы в заявленном темпе. Быстрых и медленных бегунов ценим одинаково. И помним, что парк не только наш: уступаем дорогу, благодарим людей и убираем за собой. Это не набор обязательств на все случаи жизни, а обычная деятельная доброжелательность.</p>
+      </article>
+
+      <article class="card" id="independence">
+        <header class="card-head"><span class="number">03</span><h2>Независимость</h2></header>
+        <p>Мы сами решаем, каким быть Измайлонгу. Можем дружить с другими клубами и делать совместные проекты, но не хотим становиться частью каких-либо организаций, кампаний или чиновничьих инициатив. Поэтому избегаем постоянных партнёрств, чужих логотипов на основной клубной форме и договорённостей, которые дают кому-то влияние на наши решения. Нам также не хочется, чтобы сообщество с нашего согласия использовали для чужой отчётности, политического позиционирования или KPI.</p>
+      </article>
+
+      <article class="card" id="money">
+        <header class="card-head"><span class="number">04</span><h2>Не про деньги</h2></header>
+        <p>Измайлонг существует не для заработка. Пробежки остаются бесплатными, донаты — добровольными, а экипировку мы продаём примерно по себестоимости. Если денег мало, стол будет скромнее; если больше — можно сделать подарки, сшить манишки или устроить дополнительное событие. Реклама возможна только в редких случаях, когда она приносит участникам действительно большую пользу. Зарабатывать на доверии сообщества нам неинтересно.</p>
+      </article>
+
+      <article class="card" id="runners">
+        <header class="card-head"><span class="number">05</span><h2>Бегуны для бегунов</h2></header>
+        <p>Мы делаем для себя то, чем сами хотим пользоваться, и делимся результатом с другими. Любой участник может предложить пробежку, тренировку, квиз или другую идею, взять её на себя и попросить помощи у организаторов. Если инициатива выходит от имени всего Измайлонга, вместе доведём её до подходящего качества. Участвовать в организации необязательно: можно помогать время от времени, а можно просто приходить бегать. Если основных организаторов нет, сообщество не останавливается — пробежку могут провести другие.</p>
+      </article>
+
+      <article class="card" id="simple">
+        <header class="card-head"><span class="number">06</span><h2>Хорошо и просто</h2></header>
+        <p>Стараемся делать качественно и симпатично, но не усложнять без необходимости. Если задачу решает простой список, не нужно строить вокруг него отдельную систему. Пишем понятно, аккуратно и по делу, без пафоса и пустых заявлений. Чем заметнее проект и сильнее он связан с именем Измайлонга, тем внимательнее относимся к содержанию, оформлению и деталям. И выполняем то, что пообещали: соблюдаем заявленный темп, время и другие договорённости.</p>
+      </article>
+
+      <article class="card team" id="team">
+        <header class="card-head">
+          <span class="number">07</span>
+          <div><h2>Мы — команда</h2><span class="scope">прежде всего для организаторов</span></div>
+        </header>
+        <p>Мы хотим быть командой, в которой люди слышат друг друга, ценят разные мнения и могут спокойно не соглашаться. В важных вопросах стараемся найти решение, которое каждый способен искренне принять. Если кто-то принципиально возражает, важно объяснить риск и помочь найти другой вариант. При этом не каждую мелочь нужно обсуждать всем составом: часть решений принимает тот, кто отвечает за конкретное направление. После договорённости действуем вместе и не продолжаем проигранный спор через саботаж или бездействие.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner"><strong>Izmylong</strong><span>Как у нас принято</span></div>
+  </footer>
+</body>
+</html>
