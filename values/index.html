@@ -89,16 +89,17 @@
     .check-grid > div { padding:22px 24px; background:#f2efe6; border-radius:14px; }
     h4 { margin:0 0 13px; color:var(--muted); font-size:10px; font-weight:850; letter-spacing:.13em; text-transform:uppercase; }
     .check li { margin-top:9px; font-size:15px; line-height:1.53; }
-    .internal { padding:35px 32px 31px; color:#fff; background:var(--deep); border:0; border-radius:16px; }
-    .internal .number { color:var(--deep); background:var(--lime); }
-    .internal .value-head p,.internal li { color:rgba(255,255,255,.86); }
-    .internal .scope { color:#f5f0e5; background:rgba(255,255,255,.08); }
-    .internal h3 { color:var(--lime); }
-    .internal h3::before { background:var(--lime); }
-    .internal .practices,.internal .check-grid > div { background:rgba(255,255,255,.07); }
-    .internal .check { border-color:rgba(255,255,255,.15); }
-    .internal h4 { color:rgba(255,255,255,.55); }
-    .internal li::before { background:rgba(255,255,255,.4); }
+    .internal { padding:35px 32px 31px; color:var(--ink); background:#edf5ee; border:1px solid #c8d9cb; border-radius:16px; box-shadow:0 8px 28px rgba(25,55,44,.045); }
+    .internal .number { color:var(--deep); background:#d5e8d7; }
+    .internal .value-head p,.internal li { color:#40594f; }
+    .internal .scope { color:var(--deep); background:rgba(36,120,74,.1); }
+    .internal h3 { color:var(--deep); }
+    .internal h3::before { background:var(--green); }
+    .internal .practices { background:#e2eee3; }
+    .internal .check-grid > div { background:#f2efe6; }
+    .internal .check { border-color:var(--line); }
+    .internal h4 { color:var(--muted); }
+    .internal li::before { background:#93a69c; }
     footer { padding:26px 28px; color:#dce6df; background:#173d2c; }
     .footer-inner { display:flex; justify-content:space-between; width:min(100%,var(--content)); margin:auto; font-size:12px; }
     @media(max-width:980px) { .layout { display:block; } .side { display:none; } .mobile-nav { display:block; } }
@@ -118,7 +119,7 @@
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
     @media print {
       @page { size:A4; margin:14mm; } html,body { background:#fff; } .hero { padding:20px; background:#fff; } .mobile-nav,.side,footer { display:none!important; }
-      .layout { display:block; width:100%; padding-top:25px; } .value { break-inside:auto; margin-bottom:35px; } .practices,.check-grid>div { break-inside:avoid; } .internal { background:var(--deep)!important; print-color-adjust:exact; }
+      .layout { display:block; width:100%; padding-top:25px; } .value { break-inside:auto; margin-bottom:35px; } .practices,.check-grid>div { break-inside:avoid; } .internal { background:#edf5ee!important; print-color-adjust:exact; }
     }
   </style>
 </head>
@@ -199,7 +200,7 @@
           <div><h2>Бегуны для бегунов</h2><p>Создаём то, чем сами хотим пользоваться, и делимся результатом: сами бегуны инициируют и запускают активности для себя и других бегунов. Организаторы в сообществе – про роль и ответственность, а не про власть или обязательства.</p></div>
           
         </header>
-        <section class="practices"><h3>Практики</h3><ul><li>Значимую роль в организации пробежек и других активностей берут на себя не только организаторы, но и другие участники сообщества.</li><li>Участие в организации поощряется: признание вклада, благодарность и место в «зале славы».</li><li>Участники сообщества могут предложить новую идею, взять ответственность и получить поддержку организаторов.</li><li>Участие в организации – возможность и привилегия, но не обязательство. Можно приходить и просто бегать.</li><li>Если организаторы не могут провести пробежку или событие, то это не отмена, а переход в режим самоорганизации.</li><li>Сделать хорошо и в соответствии с ценностями важнее массовости, заметности, эффектности и финансовой выгоды.</li><li>Не пытаемся сделать хорошо для всех: сохраняем характер сообщества.</li></ul></section>
+        <section class="practices"><h3>Практики</h3><ul><li>Значимую роль в организации пробежек и других активностей берут на себя не только организаторы, но и другие участники сообщества.</li><li>Участие в организации поощряется: признание вклада, благодарность и место в «зале славы».</li><li>Участники сообщества могут предложить новую идею, взять ответственность и получить поддержку организаторов.</li><li>Участие в организации – возможность и привилегия, но не обязательство. Можно приходить и просто бегать.</li><li>Если организаторы не могут провести пробежку или событие, то это не отмена, а переход в режим самоорганизации.</li><li>Не пытаемся сделать хорошо для всех: сохраняем характер сообщества.</li></ul></section>
         <section class="check"><h3>Проверка</h3>
           <div class="check-grid">
             <div><h4>Вопросы</h4><ul><li>Можно ли доверить эту роль участнику или коорганизатору, не замыкая всё на основных организаторах?</li><li>Есть ли человек, который действительно хочет взять ответственность за реализацию и продолжение?</li><li>Остаётся ли участие добровольным, без чувства вины и обязанности «отрабатывать» принадлежность?</li><li>Не жертвуем ли мы чем-то из наших ценностей в пользу массовости, известности или денег?</li><li>Сможем ли мы поддерживать эту активность без постоянной перегрузки организаторов?</li></ul></div>
@@ -213,7 +214,7 @@
           <div><h2>Хорошо и просто</h2><p>Выбираем эффективное сочетание принципов «keep it simple» и «если что-то делать, то делать это хорошо». Просто, лаконично, аккуратно и по делу. Но продуманно, качественно и симпатично.</p></div>
           
         </header>
-        <section class="practices"><h3>Практики</h3><ul><li>Ценим и поддерживаем идентичность и репутацию сообщества.</li><li>Пишем просто, лаконично, понятно, конкретно и грамотно.</li><li>Помогаем инициативам получить понятную форму и аккуратную упаковку.</li><li>Чем заметнее проект и сильнее он связан с именем Измайлонга, тем выше требования к его качеству.</li><li>Знаем и соблюдаем правила общения в чатах и поведения на пробежках.</li><li>Избегаем пафоса, абстрактных обещаний, неискренности и неконкретности.</li><li>Не используем доверие и внимание сообщества как товар.</li><li>Не засоряем каналы избыточной, лишней или неуникальной информацией.</li><li>Соблюдаем обещания: темп групп, тайминг мероприятий и другие договорённости.</li><li>Сделать хорошо и в соответствии с ценностями важнее массовости, заметности, эффектности и финансовой выгоды.</li></ul></section>
+        <section class="practices"><h3>Практики</h3><ul><li>Ценим и поддерживаем идентичность и репутацию сообщества.</li><li>Пишем просто, лаконично, понятно, конкретно и грамотно.</li><li>Помогаем инициативам получить понятную форму и аккуратную упаковку.</li><li>Чем заметнее проект и сильнее он связан с именем Измайлонга, тем выше требования к его качеству.</li><li>Знаем и соблюдаем правила общения в чатах и поведения на пробежках.</li><li>Избегаем пафоса, абстрактных обещаний, неискренности и неконкретности.</li><li>Не засоряем каналы избыточной, лишней или неуникальной информацией.</li><li>Соблюдаем обещания: темп групп, тайминг мероприятий и другие договорённости.</li><li>Сделать хорошо и в соответствии с ценностями важнее массовости, заметности, эффектности и финансовой выгоды.</li></ul></section>
         <section class="check"><h3>Проверка</h3>
           <div class="check-grid">
             <div><h4>Вопросы</h4><ul><li>Выбрали ли мы самое простое решение, которое достаточно хорошо работает?</li><li>Соответствуют ли качество и внешний вид тому, что мы готовы выпускать от имени Измайлонга?</li><li>Решает ли это реальную задачу?</li><li>Понятно ли это человеку без дополнительных объяснений?</li><li>Проверили ли мы то, что люди действительно увидят и чем будут пользоваться?</li><li>Не создаёт ли решение лишних правил, действий или постоянной рутины?</li></ul></div>
@@ -237,7 +238,7 @@
       </article>
     </main>
   </div>
-  <footer><div class="footer-inner"><strong>Izmylong</strong><span>Матрица ценностей · рабочая версия 0.10</span></div></footer>
+  <footer><div class="footer-inner"><strong>Izmylong</strong><span>Матрица ценностей · рабочая версия 0.11</span></div></footer>
   <script>
     (()=>{
       const sections=[...document.querySelectorAll('main article[id]')];
