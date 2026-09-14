@@ -98,12 +98,12 @@
       margin:auto; padding:76px 0 88px;
     }
     .intro {
-      display:grid; grid-template-columns:minmax(240px,.72fr) 1.28fr;
-      gap:60px; align-items:start; margin-bottom:50px;
+      display:grid; grid-template-columns:180px 1fr;
+      gap:34px; align-items:start; margin-bottom:42px;
     }
     .intro h2 {
-      margin:0; font-size:clamp(31px,4vw,49px);
-      font-weight:640; line-height:1.08; letter-spacing:-.045em;
+      margin:3px 0 0; color:var(--green);
+      font-size:18px; font-weight:750; line-height:1.25; letter-spacing:-.015em;
     }
     .intro p { margin:3px 0 0; color:var(--muted); font-size:17px; }
     .cards { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
@@ -158,10 +158,18 @@
       h1 { font-size:clamp(44px,14vw,61px); }
       .lead { margin-top:20px; font-size:17px; }
       .nav-wrap { width:calc(100% - 28px); margin-top:-23px; }
-      .nav { border-radius:13px; }
-      .nav a { padding:9px 11px; }
+      .nav {
+        display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:5px; padding:6px; overflow:visible; border-radius:13px;
+      }
+      .nav a {
+        display:flex; align-items:center; justify-content:center;
+        min-width:0; padding:9px 8px; white-space:normal;
+        text-align:center; line-height:1.25;
+      }
+      .nav a:last-child { grid-column:1/-1; }
       main { width:calc(100% - 32px); padding:58px 0 64px; }
-      .intro { margin-bottom:33px; }
+      .intro { gap:8px; margin-bottom:33px; }
       .intro p { font-size:16px; }
       .card { padding:24px 21px 26px; border-radius:14px; }
       .card-head { margin-bottom:14px; }
@@ -191,7 +199,6 @@
       <div class="hero-copy">
         <p class="eyebrow">Ценности Измайлонга — коротко</p>
         <h1>Как у нас принято</h1>
-        <p class="lead">Семь коротких рассказов о том, каким мы хотим видеть наше сообщество и как это проявляется в обычной жизни.</p>
       </div>
     </div>
   </header>
@@ -211,7 +218,7 @@
   <main id="content">
     <section class="intro" aria-labelledby="intro-title">
       <h2 id="intro-title">Что такое Измайлонг</h2>
-      <p>Беговое сообщество, в котором люди вместе бегают, общаются и делают разные штуки для себя и друг друга. Формального членства у нас нет: если ты бегаешь с нами и чувствуешь себя частью сообщества — значит, так и есть.</p>
+      <p>Измайлонг – сообщество про бег, общение и удовольствие от жизни. Объединяющее ядро сообщества – групповые пробежки в Измайловском парке в Москве.</p>
     </section>
 
     <div class="cards">
