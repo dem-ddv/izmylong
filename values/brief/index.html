@@ -93,6 +93,7 @@
     .nav a:hover,.nav a:focus-visible {
       color:var(--green-dark); background:var(--mint); outline:none;
     }
+    .mobile-nav { display:none; }
     main {
       width:min(calc(100% - 56px),var(--content));
       margin:auto; padding:76px 0 88px;
@@ -128,16 +129,16 @@
     .team {
       grid-column:1/-1; display:grid; grid-template-columns:minmax(245px,.72fr) 1.28fr;
       gap:52px; padding:37px 38px 39px;
-      color:var(--white); background:var(--green-dark); border:0;
-      box-shadow:none;
+      color:var(--ink); background:#edf5ee; border:1px solid #c8d9cb;
+      box-shadow:0 8px 28px rgba(25,55,44,.045);
     }
     .team .card-head { align-items:flex-start; margin:0; }
-    .team .number { color:var(--green-dark); background:var(--lime); }
-    .team h2 { color:var(--white); }
-    .team p { color:rgba(255,255,255,.84); }
+    .team .number { color:var(--green-dark); background:#d5e8d7; }
+    .team h2 { color:var(--ink); }
+    .team p { color:#40594f; }
     .scope {
       display:inline-block; margin-top:9px; padding:5px 9px;
-      color:var(--lime); background:rgba(255,255,255,.08); border-radius:999px;
+      color:var(--green-dark); background:rgba(36,120,74,.1); border-radius:999px;
       font-size:9px; font-weight:850; letter-spacing:.1em; text-transform:uppercase;
     }
     footer { padding:25px 28px; color:#dce6df; background:#173d2c; }
@@ -158,16 +159,33 @@
       h1 { font-size:clamp(44px,14vw,61px); }
       .lead { margin-top:20px; font-size:17px; }
       .nav-wrap { width:calc(100% - 28px); margin-top:-23px; }
-      .nav {
-        display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
-        gap:5px; padding:6px; overflow:visible; border-radius:13px;
+      .nav { display:none; }
+      .mobile-nav {
+        display:block; overflow:hidden;
+        background:rgba(255,255,255,.97); border:1px solid var(--line);
+        border-radius:13px; box-shadow:0 13px 32px rgba(25,55,44,.08);
       }
-      .nav a {
+      .mobile-nav summary {
         display:flex; align-items:center; justify-content:center;
-        min-width:0; padding:9px 8px; white-space:normal;
-        text-align:center; line-height:1.25;
+        gap:12px; min-height:50px; padding:11px 16px;
+        color:#50665c; cursor:pointer; list-style:none;
+        font-size:14px; font-weight:750; line-height:1.2;
       }
-      .nav a:last-child { grid-column:1/-1; }
+      .mobile-nav summary::-webkit-details-marker { display:none; }
+      .mobile-nav summary::after {
+        content:""; width:7px; height:7px; margin-top:-4px;
+        border-right:2px solid currentColor; border-bottom:2px solid currentColor;
+        transform:rotate(45deg); transition:transform .18s ease,margin .18s ease;
+      }
+      .mobile-nav[open] summary::after { margin-top:4px; transform:rotate(225deg); }
+      .mobile-nav-links { display:grid; padding:0 8px 8px; }
+      .mobile-nav a {
+        padding:11px 13px; color:#50665c; border-top:1px solid #edf0eb;
+        font-size:14px; font-weight:680; line-height:1.25; text-decoration:none;
+      }
+      .mobile-nav a:hover,.mobile-nav a:focus-visible {
+        color:var(--green-dark); background:var(--mint); border-radius:8px; outline:none;
+      }
       main { width:calc(100% - 32px); padding:58px 0 64px; }
       .intro { gap:8px; margin-bottom:33px; }
       .intro p { font-size:16px; }
@@ -186,7 +204,7 @@
       .nav-wrap,footer { display:none; }
       main { width:100%; padding:30px 0; }
       .card { break-inside:avoid; box-shadow:none; }
-      .team { background:var(--green-dark)!important; print-color-adjust:exact; }
+      .team { background:#edf5ee!important; print-color-adjust:exact; }
     }
   </style>
 </head>
@@ -213,6 +231,18 @@
       <a href="#simple">Хорошо и просто</a>
       <a href="#team">Мы — команда</a>
     </nav>
+    <details class="mobile-nav">
+      <summary>Перейти к ценности</summary>
+      <nav class="mobile-nav-links" aria-label="Навигация по ценностям">
+        <a href="#calm">Остров спокойствия</a>
+        <a href="#care">Забота</a>
+        <a href="#independence">Независимость</a>
+        <a href="#money">Не про деньги</a>
+        <a href="#runners">Бегуны для бегунов</a>
+        <a href="#simple">Хорошо и просто</a>
+        <a href="#team">Мы — команда</a>
+      </nav>
+    </details>
   </div>
 
   <main id="content">
@@ -265,5 +295,12 @@
   <footer>
     <div class="footer-inner"><strong>Izmylong</strong><span>Как у нас принято</span></div>
   </footer>
+  <script>
+    document.querySelectorAll('.mobile-nav a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        link.closest('details').removeAttribute('open');
+      });
+    });
+  </script>
 </body>
 </html>
