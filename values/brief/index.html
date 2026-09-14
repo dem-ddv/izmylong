@@ -70,6 +70,7 @@
       font-size:clamp(48px,7vw,82px); font-weight:650;
       line-height:1; letter-spacing:-.055em;
     }
+    .title-mobile { display:none; }
     .lead {
       max-width:690px; margin:25px 0 0;
       color:#4d665b; font-size:clamp(18px,2vw,22px); line-height:1.5;
@@ -93,7 +94,6 @@
     .nav a:hover,.nav a:focus-visible {
       color:var(--green-dark); background:var(--mint); outline:none;
     }
-    .mobile-nav { display:none; }
     main {
       width:min(calc(100% - 56px),var(--content));
       margin:auto; padding:76px 0 88px;
@@ -157,37 +157,13 @@
       .brand { font-size:24px; }
       .hero-copy { margin-top:42px; }
       h1 { font-size:clamp(44px,14vw,61px); }
+      .eyebrow,.title-desktop { display:none; }
+      .title-mobile { display:inline; }
       .lead { margin-top:20px; font-size:17px; }
-      .nav-wrap { width:calc(100% - 28px); margin-top:-23px; }
-      .nav { display:none; }
-      .mobile-nav {
-        display:block; overflow:hidden;
-        background:rgba(255,255,255,.97); border:1px solid var(--line);
-        border-radius:13px; box-shadow:0 13px 32px rgba(25,55,44,.08);
-      }
-      .mobile-nav summary {
-        display:flex; align-items:center; justify-content:center;
-        gap:12px; min-height:50px; padding:11px 16px;
-        color:#50665c; cursor:pointer; list-style:none;
-        font-size:14px; font-weight:750; line-height:1.2;
-      }
-      .mobile-nav summary::-webkit-details-marker { display:none; }
-      .mobile-nav summary::after {
-        content:""; width:7px; height:7px; margin-top:-4px;
-        border-right:2px solid currentColor; border-bottom:2px solid currentColor;
-        transform:rotate(45deg); transition:transform .18s ease,margin .18s ease;
-      }
-      .mobile-nav[open] summary::after { margin-top:4px; transform:rotate(225deg); }
-      .mobile-nav-links { display:grid; padding:0 8px 8px; }
-      .mobile-nav a {
-        padding:11px 13px; color:#50665c; border-top:1px solid #edf0eb;
-        font-size:14px; font-weight:680; line-height:1.25; text-decoration:none;
-      }
-      .mobile-nav a:hover,.mobile-nav a:focus-visible {
-        color:var(--green-dark); background:var(--mint); border-radius:8px; outline:none;
-      }
-      main { width:calc(100% - 32px); padding:58px 0 64px; }
+      .nav-wrap { display:none; }
+      main { width:calc(100% - 32px); padding:36px 0 64px; }
       .intro { gap:8px; margin-bottom:33px; }
+      .intro h2 { display:none; }
       .intro p { font-size:16px; }
       .card { padding:24px 21px 26px; border-radius:14px; }
       .card-head { margin-bottom:14px; }
@@ -216,7 +192,7 @@
       <div class="brand" aria-label="Измайлонг">Izmylong</div>
       <div class="hero-copy">
         <p class="eyebrow">Ценности Измайлонга — коротко</p>
-        <h1>Как у нас принято</h1>
+        <h1><span class="title-desktop">Как у нас принято</span><span class="title-mobile">Ценности сообщества</span></h1>
       </div>
     </div>
   </header>
@@ -231,18 +207,6 @@
       <a href="#simple">Хорошо и просто</a>
       <a href="#team">Мы — команда</a>
     </nav>
-    <details class="mobile-nav">
-      <summary>Перейти к ценности</summary>
-      <nav class="mobile-nav-links" aria-label="Навигация по ценностям">
-        <a href="#calm">Остров спокойствия</a>
-        <a href="#care">Забота</a>
-        <a href="#independence">Независимость</a>
-        <a href="#money">Не про деньги</a>
-        <a href="#runners">Бегуны для бегунов</a>
-        <a href="#simple">Хорошо и просто</a>
-        <a href="#team">Мы — команда</a>
-      </nav>
-    </details>
   </div>
 
   <main id="content">
@@ -295,12 +259,5 @@
   <footer>
     <div class="footer-inner"><strong>Izmylong</strong><span>Как у нас принято</span></div>
   </footer>
-  <script>
-    document.querySelectorAll('.mobile-nav a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        link.closest('details').removeAttribute('open');
-      });
-    });
-  </script>
 </body>
 </html>
